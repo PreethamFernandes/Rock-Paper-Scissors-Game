@@ -39,10 +39,7 @@ function computerWins() {
     // !lose(userScore, computerScore)
 }
 
-function noOneWins() {
-    userScore = 0;
-    computerScore = 0;
-}
+
 
 function win(userChoice, computerChoice) {
     const smallUserWord = "(User)".fontsize(3).sup();
@@ -55,6 +52,10 @@ function win(userChoice, computerChoice) {
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord} . You Win!`;
     userChoice_div.classList.add('green-glow')
     setTimeout(function () { userChoice_div.classList.remove('green-glow') }, 500)
+     if (computerScore == 10 || userScore == 10) {
+        userScore = 0;
+        computerScore = 0;
+    }
     }
 
 
@@ -70,7 +71,10 @@ function lose(userChoice, computerChoice) {
     setTimeout(function () { userChoice_div.classList.remove('red-glow') }, 500)
     if (computerScore == 10 && userScore < 10) { 
        computerWins();
-       
+    }
+     if (computerScore == 10 || userScore == 10) {
+        userScore = 0;
+        computerScore = 0;
     }
 }
 
@@ -84,7 +88,8 @@ function draw(userChoice, computerChoice) {
     userChoice_div.classList.add('grey-glow')
     setTimeout(function () { userChoice_div.classList.remove('grey-glow') }, 500)
     if (computerScore == 10 || userScore == 10) {
-        noOneWins();
+        userScore = 0;
+        computerScore = 0;
     }
 
 }
