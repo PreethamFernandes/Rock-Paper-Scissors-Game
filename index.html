@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/rock.png" type="image/x-icon">
+    <style>
+        .glow {
+    border: 4x solid #00ff6afb !important; 
+    box-shadow: 0 0 10px #2bb4f8;
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Rock Paper Scissor</h1>
+        <p id="winner">Win-Score: 10</p>
+    </header>
+
+    <div class="score-board">
+        <div class="badge" id="user-label">user</div>
+        <div class="badge" id="computer-label">comp</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+    </div>
+
+    <div class="result">
+        <p>Click to Play!</p>
+    </div>
+
+    <div class="choices">
+        <div class="choice" id="r"><img src="img/rock.png" alt="" width="85px"> </div>
+        <div class="choice" id="p"><img src="img/paper.png" alt="" width="85px"></div>
+        <div class="choice" id="s"><img src="img/scissor.png" alt="" width="85px"></div>
+    </div>
+
+    <p id="action-message"></p>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
